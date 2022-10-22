@@ -9,7 +9,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <nav>
+          <Header />
+        </nav>
         <Switch>
           <Route path="/" to="/landing" exact component={LandingPage} />
           <Route
