@@ -3,7 +3,7 @@ import './Header.scss';
 function Header() {
   return (
     <div className="header">
-      <p>This is the header</p>
+      <h1>PlutoWeb</h1>
 
      
     </div>
