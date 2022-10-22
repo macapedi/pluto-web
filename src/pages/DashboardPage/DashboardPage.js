@@ -9,7 +9,7 @@ import 'axios';
 // function makeH1(name, direction, align, color){
 //   pluto.container()
 // }
-function updateCode(){
+function updateCode() {
   const htmlRaw = document.querySelector('.preview-container__html');
   const codeContainer = document.querySelector('.code-container__code');
   codeContainer.innerText = htmlRaw.outerHTML;
@@ -19,8 +19,8 @@ function DashboardPage() {
   // pluto.container('test','horizontal', 'center', 'blue');
   // pluto.h1('test h1', 'test', 'testh1', 'black');
   return (
-    <div className="dashboard">
-      <h1>This is Dashboard Page</h1>
+    <main>
+      <div className="dashboard">
       <section className='main'>
         <div className='code-container'>
           <h2 className='code-container__title'>Code of the Site</h2>
@@ -36,36 +36,34 @@ function DashboardPage() {
         </div>
 
       </section>
+      
       <section className='input'>
         <div className='input__main'>
 
 
 
+          <form className='input-form'> 
+            <div className='input__main-input'>
+              <h3 className='input__main-input-title title'>1. Enter a Value</h3>
+              <div className='input__main-input-container'>
+                <label htmlFor='input'>Text</label>
+                <input type='text' id='input' name='input' ></input>
 
+                <label htmlFor='url'>Link URL</label>
+                <input type='text' id='url' name='url'></input>
 
+                <label htmlFor='imgurl'>Image URL</label>
+                <input type='text' id='imgurl' name='imgurl'></input>
 
+                <label htmlFor='imgwidth'>Image Width</label>
+                <input type='text' id='imgwidth' name='imgwidth'></input>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <form>
+                <label htmlFor='imgaria'>Image Aria-Label</label>
+                <input type='text' id='imgaria' name='imgaria'></input>
+              </div>
+            </div>
             <div className='input__main-buttons'>
-              <h3 className='input__main-title'>Pick a Component</h3>
+              <h3 className='input__main-title title'>2. Pick a Component</h3>
               <div className='input__main-buttons-list'>
 
 
@@ -83,10 +81,10 @@ function DashboardPage() {
 
                 {/* Subtitle */}
                 <button type='submit' className='input__main-buttons-list-button' onClick={(e) => {
-                    e.preventDefault();
-                    updateCode();
-                    pluto.h3(e.target.form.input.value, 'preview-container__html--id', 'title', 'black');
-                  }}>Subtitle</button>
+                  e.preventDefault();
+                  updateCode();
+                  pluto.h3(e.target.form.input.value, 'preview-container__html--id', 'title', 'black');
+                }}>Subtitle</button>
 
                 {/* Link */}
                 <button className='input__main-buttons-list-button' onClick={(e) => {
@@ -103,62 +101,34 @@ function DashboardPage() {
 
                 {/* Image */}
                 <button type='submit' className='input__main-buttons-list-button' onClick={(e) => {
-                    e.preventDefault();
-                    updateCode();
-                    pluto.image(e.target.form.imgurl.value, e.target.form.imgwidth.value, 'image', e.target.form.imgaria.value, 'preview-container__html--id');
-                  }}>Image</button>
+                  e.preventDefault();
+                  updateCode();
+                  pluto.image(e.target.form.imgurl.value, e.target.form.imgwidth.value, 'image', e.target.form.imgaria.value, 'preview-container__html--id');
+                }}>Image</button>
 
                 {/* Form */}
-                <button className='input__main-buttons-list-button'>Form</button>
+                <button type="submit" className='input__main-buttons-list-button' onSubmit={(e) => {
+                  e.preventDefault();
+                  updateCode();
+                  pluto.form([],'preview-container__html--id');
+                }}>Form</button>
+
 
                 {/* Paragraph */}
                 <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
-                    e.preventDefault();
-                    updateCode();
-                    pluto.p(e.target.form.input.value, 'preview-container__html--id', 'title', 'black');
-                  }}>Paragraph</button>
+                  e.preventDefault();
+                  updateCode();
+                  pluto.p(e.target.form.input.value, 'preview-container__html--id', 'title', 'black');
+                }}>Paragraph</button>
               </div>
             </div>
-            <div className='input__main-input'>
-              <h3 className='input__main-input-title'>Value</h3>
-              <div className='input__main-input-container'>
-                <label htmlFor='input'>Text</label>
-                <input type='text' id='input' name='input' ></input>
-
-                <label htmlFor='url'>Link URL</label>
-                <input type='text' id='url' name='url'></input>
-
-                <label htmlFor='url'>Image URL</label>
-                <input type='text' id='imgurl' name='imgurl'></input>
-
-                <label htmlFor='url'>Image Width</label>
-                <input type='text' id='imgwidth' name='imgwidth'></input>
-
-                <label htmlFor='url'>Image Aria-Label</label>
-                <input type='text' id='imgaria' name='imgaria'></input>
-              </div>
-            </div>
+           
           </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </div>
         <div className='input__crud'>
-          <h3 className='input__crud-title'>Edit</h3>
+          <h3 className='input__crud-title title'>3. Edit</h3>
           <div className='input__crud-buttons-list'>
             <button className='input__crud-buttons-list-button'>Create</button>
             <button className='input__crud-buttons-list-button'>Delete</button>
@@ -166,6 +136,8 @@ function DashboardPage() {
         </div>
       </section>
     </div>
+    </main>
+    
   );
 }
 
