@@ -6,11 +6,9 @@ function Header() {
   return (
     <div className="header">
       <Link to="/dashboard">
-        <img src={logo} className="header__logo"></img>
+        <img src={logo} alt='navbar logo' aria-label="the logo is a picture of the planet pluto" className="header__logo"></img>
       </Link>
-      <Link to="/dashboard" className="header__title">
-        <h1>PlutoWeb</h1>
-      </Link>
+        <h1 className="header__title">PlutoWeb</h1>
     </div>
   );
 }

@@ -178,8 +178,7 @@ function DashboardPage() {
           <div className='input__crud'>
             <h3 className='input__crud-title title'>3. Edit</h3>
             <div className='input__crud-buttons-list'>
-              <button className='input__crud-buttons-list-button'>Create</button>
-              <button className='input__crud-buttons-list-button' onClick={() => {onDelete()}}>Delete</button>
+              <button className='input__crud-buttons-list-button' onClick={() => {onDelete()}}>Clear</button>
             </div>
           </div>
         </section>

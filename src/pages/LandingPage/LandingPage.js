@@ -23,18 +23,25 @@ function LandingPage() {
           <h1 className="landing-page__info-title">Why PlutoWeb?</h1>
         </div>
         <div className="landing-page__info-container">
-          <div className="landing-page__info-content">
-            <p>
-              <span className="dark">1. PlutoWeb</span> simplifies coding for
-              beginners
-            </p>
-            <p>
-              <span className="dark">2. PlutoWeb</span> is open-source
-            </p>
-            <p>
-              <span className="dark">3. PlutoWeb</span> is made by students for
-              students
-            </p>
+          <div >
+
+
+
+
+            <ol className="landing-page__info-content">
+              <li><p>
+                <span className="dark">PlutoWeb</span> simplifies coding for
+                beginners
+              </p></li>
+              <li><p>
+                <span className="dark">PlutoWeb</span> is open-source
+              </p></li>
+              <li><p>
+                <span className="dark">PlutoWeb</span> is made by students for
+                students
+              </p></li>
+
+            </ol>
           </div>
         </div>
       </div>
