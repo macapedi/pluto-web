@@ -1,0 +1,66 @@
+.dashboard{
+    height: 100%;
+    background-color: pink;
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    height: 20rem;
+    gap: 1rem;
+}
+
+.code-container {
+    width: 50%;
+    height: 85%;
+    &__code {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+    }
+}
+
+.preview-container {
+    width: 50%;
+    height: 85%;
+    &__html {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+    }
+}
+
+.input{
+    display: flex;
+    justify-content: space-between;
+    &__main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        &-buttons{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            &-list{
+                display: flex;
+                gap: 0.25rem;
+                flex-wrap: wrap;
+                &-button{
+                    width: 20%;
+                    height: 2.25rem;
+                    border-radius: 0.75rem;
+                }
+            }
+        }
+    }
+
+    &__crud{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+    }
+}
