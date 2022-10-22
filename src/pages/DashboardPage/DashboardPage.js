@@ -19,6 +19,13 @@ function DashboardPage() {
     content.classList.toggle('hide_flex');
     displaysContainer.classList.toggle('display_height');
   }
+
+  const onDelete = () => {
+    const codeContainerToClear = document.querySelector(".code-container__code");
+    console.log(codeContainerToClear);
+    codeContainerToClear.innerText= "";
+  };
+
   return (
     <main>
       <div className="dashboard">
@@ -78,7 +85,7 @@ function DashboardPage() {
                   <button type='submit' className='input__main-buttons-list-button'
                     onClick={(e) => {
                       e.preventDefault();
-                      pluto.h1(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value: 'black'));
+                      pluto.h1(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value : 'black'));
                       updateCode();
                     }}>Title</button>
 
@@ -108,20 +115,27 @@ function DashboardPage() {
                   {/* Subtitle */}
                   <button type='submit' className='input__main-buttons-list-button' onClick={(e) => {
                     e.preventDefault();
-                    pluto.h3(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value: 'black'));
+                    pluto.h3(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value : 'black'));
                     updateCode();
                   }}>Subtitle</button>
 
                   {/* Link */}
-                  <button className='input__main-buttons-list-button' onClick={(e) => {
+                  <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
                     e.preventDefault(e);
                     pluto.link(e.target.form.input.value, e.target.form.url.value, 'link to google.com', '16', 'link', 'preview-container__html--id');
                     updateCode();
                   }}>Link</button>
 
                   <br></br>
-                  {/* Container */}
-                  <button className='input__main-buttons-list-button'>Container</button>
+                  {/* UL */}
+                  <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
+                    e.preventDefault(e);
+                    const optionsString = e.target.form.navbar.value;
+                    const optionsArr = optionsString.split(',');
+
+                    pluto.ul(optionsArr, (e.target.form.color.value ? e.target.form.color.value : 'black'), '1.5rem','preview-container__html--id' );
+                    updateCode();
+                  }}>List</button>
 
                   {/* Image */}
                   <button type='submit' className='input__main-buttons-list-button' onClick={(e) => {
@@ -131,20 +145,20 @@ function DashboardPage() {
                   }}>Image</button>
 
                   {/* Form */}
-                  <button type="submit" className='input__main-buttons-list-button' onSubmit={(e) => {
+                  <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
                     e.preventDefault();
                     const optionsString = e.target.form.navbar.value;
                     const optionsArr = optionsString.split(',');
 
-                    pluto.form(optionsArr, 'preview-container__html--id');
+                    let myform = pluto.form(optionsArr, 'preview-container__html--id');
+                    console.log(myform);
                     updateCode();
                   }}>Form</button>
-
 
                   {/* Paragraph */}
                   <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
                     e.preventDefault();
-                    pluto.p(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value: 'black'));
+                    pluto.p(e.target.form.input.value, 'preview-container__html--id', 'title', (e.target.form.color.value ? e.target.form.color.value : 'black'));
                     updateCode();
                   }}>Paragraph</button>
                 </div>
@@ -158,7 +172,7 @@ function DashboardPage() {
             <h3 className='input__crud-title title'>3. Edit</h3>
             <div className='input__crud-buttons-list'>
               <button className='input__crud-buttons-list-button'>Create</button>
-              <button className='input__crud-buttons-list-button'>Delete</button>
+              <button className='input__crud-buttons-list-button' onClick={() => {onDelete()}}>Delete</button>
             </div>
           </div>
         </section>
