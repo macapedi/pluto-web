@@ -1,11 +1,16 @@
-import './Header.scss';
+import "./Header.scss";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 function Header() {
   return (
     <div className="header">
-      <h1>PlutoWeb</h1>
-
-     
+      <Link to="/dashboard">
+        <img src={logo} className="header__logo"></img>
+      </Link>
+      <Link to="/dashboard" className="header__title">
+        <h1>PlutoWeb</h1>
+      </Link>
     </div>
   );
 }
