@@ -27,8 +27,8 @@ function DashboardPage() {
     const renderContainerToClear = document.querySelector(
       ".preview-container__html"
     );
-    console.log(codeContainerToClear);
-    console.log(renderContainerToClear);
+    // console.log(codeContainerToClear);
+    // console.log(renderContainerToClear);
     codeContainerToClear.innerText = "";
     renderContainerToClear.innerText = "";
   };
