@@ -15,6 +15,7 @@
     width: 50%;
     height: 85%;
     &__code {
+        overflow: scroll;
         background-color: white;
         height: 90%;
         width: 100%;
@@ -28,6 +29,7 @@
         background-color: white;
         height: 90%;
         width: 100%;
+        overflow: scroll;
     }
 }
 
@@ -54,6 +56,11 @@
                     border-radius: 0.75rem;
                 }
             }
+        }
+
+        &-input-container{
+            display: flex;
+            flex-direction: column;
         }
     }
 
