@@ -12,7 +12,7 @@ function LandingPage() {
             Start coding right now in HTML and CSS with our beginner friendly
             tools.
           </p>
-          <Link className="landing-page__button">Get Started</Link>
+          <Link className="landing-page__button" to="/dashboard">Get Started</Link>
         </div>
       </div>
       <div className="landing-page__info">
@@ -35,11 +35,13 @@ function LandingPage() {
           </div>
         </div>
       </div>
+      <div>
       <img
         src={matrix}
         alt="Photo of zeros and ones"
         className="landing-page__info-img"
       />
+      </div>
     </>
   );
 }
