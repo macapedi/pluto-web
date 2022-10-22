@@ -19,6 +19,13 @@ function DashboardPage() {
     content.classList.toggle('hide_flex');
     displaysContainer.classList.toggle('display_height');
   }
+
+  const onDelete = () => {
+    const codeContainerToClear = document.querySelector(".code-container__code");
+    console.log(codeContainerToClear);
+    codeContainerToClear.innerText= "";
+  };
+
   return (
     <main>
       <div className="dashboard">
@@ -137,19 +144,6 @@ function DashboardPage() {
                     updateCode();
                   }}>Image</button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                   {/* Form */}
                   <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
                     e.preventDefault();
@@ -160,22 +154,6 @@ function DashboardPage() {
                     console.log(myform);
                     updateCode();
                   }}>Form</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                   {/* Paragraph */}
                   <button type="submit" className='input__main-buttons-list-button' onClick={(e) => {
@@ -194,7 +172,7 @@ function DashboardPage() {
             <h3 className='input__crud-title title'>3. Edit</h3>
             <div className='input__crud-buttons-list'>
               <button className='input__crud-buttons-list-button'>Create</button>
-              <button className='input__crud-buttons-list-button'>Delete</button>
+              <button className='input__crud-buttons-list-button' onClick={() => {onDelete()}}>Delete</button>
             </div>
           </div>
         </section>
