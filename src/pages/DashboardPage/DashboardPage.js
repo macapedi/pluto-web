@@ -21,9 +21,16 @@ function DashboardPage() {
   }
 
   const onDelete = () => {
-    const codeContainerToClear = document.querySelector(".code-container__code");
+    const codeContainerToClear = document.querySelector(
+      ".code-container__code"
+    );
+    const renderContainerToClear = document.querySelector(
+      ".preview-container__html"
+    );
     console.log(codeContainerToClear);
-    codeContainerToClear.innerText= "";
+    console.log(renderContainerToClear);
+    codeContainerToClear.innerText = "";
+    renderContainerToClear.innerText = "";
   };
 
   return (
