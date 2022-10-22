@@ -1,0 +1,19 @@
+.footer{
+ 
+  display: flex;
+  background-color: rgb(11, 84, 115, 1);
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  max-height: 3vh;
+  padding: 1rem;
+  margin: 0;
+
+  &__title{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+  }
+}
