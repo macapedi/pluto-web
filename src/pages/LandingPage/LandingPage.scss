@@ -77,8 +77,15 @@
     &__paragraph{
         width: 50%;
         display: flex;
-        margin-left: 25%;
+       
       
+    }
+
+    &__work-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -104,3 +111,18 @@
     text-align: left;
 }
 
+.documentation__button{
+    text-decoration: none;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+   text-align: center;
+   margin: 0.5rem;
+   width: 6rem;
+}

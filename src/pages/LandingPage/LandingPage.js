@@ -1,8 +1,7 @@
 import "./LandingPage.scss";
 import { Link } from "react-router-dom";
 import matrix from "../../assets/matrix.jpg";
-import Footer from "../../components/Header/Footer/Footer.js";
-
+import Footer from "../../components/Footer/Footer.js";
 
 function LandingPage() {
   return (
@@ -46,23 +45,30 @@ function LandingPage() {
           className="landing-page__info-img"
         />
       </div>
-      <div className="landing-page__title-work">
-        <h1 className="landing-page__work-title">How does this work?</h1>
+      <div className="landing-page__work-container">
+        <div className="landing-page__title-work">
+          <h1 className="landing-page__work-title">How does this work?</h1>
+        </div>
+        <div className="landing-page__paragraph">
+          <p>
+            Pluto Web is a web-based application that simplifies code-writing by
+            generating a code from a simple process. The process involves
+            guiding the user through: (1) inputting a value, (2) selecting a
+            component, and (3) creating the component. First, the user will
+            input possible values they want in the input field; this may be a
+            text, a link, or an image. Second, the user will choose from the
+            selection of components we included in the application. Finally,
+            when the user press the create button, the application will generate
+            the preview of the code and the actual code that the user can copy
+            and use for their needs.
+          </p>
+        </div>
+        <Link className="documentation__button" to="/documentation">
+          Go to Documentation
+        </Link>
       </div>
-      <div className="landing-page__paragraph">
-        <p>
-          Pluto Web is a web-based application that simplifies code-writing by
-          generating a code from a simple process. The process involves guiding
-          the user through: (1) inputting a value, (2) selecting a component,
-          and (3) creating the component. First, the user will input possible
-          values they want in the input field; this may be a text, a link, or an
-          image. Second, the user will choose from the selection of components
-          we included in the application. Finally, when the user press the
-          create button, the application will generate the preview of the code
-          and the actual code that the user can copy and use for their needs.
-        </p>
-      </div>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }
