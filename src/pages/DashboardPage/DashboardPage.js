@@ -18,6 +18,15 @@ function updateCode() {
 function DashboardPage() {
   // pluto.container('test','horizontal', 'center', 'blue');
   // pluto.h1('test h1', 'test', 'testh1', 'black');
+
+  const collapseHandler = (e) => {
+    e.preventDefault();
+    const content = document.querySelector('.input');
+    const displaysContainer = document.querySelector('.main');
+
+    content.classList.toggle('display_flex');
+    displaysContainer.classList.toggle('display_height');
+  }
   return (
     <main>
       <div className="dashboard">
@@ -36,10 +45,10 @@ function DashboardPage() {
         </div>
 
       </section>
-      
+      <button type="button" className="collapsible" onClick={(e) => {collapseHandler(e)}}>Collapse</button>
+
       <section className='input'>
         <div className='input__main'>
-
 
 
           <form className='input-form'> 
